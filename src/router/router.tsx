@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Redirect, Switch, Route } from 'react-router-dom';
 import { Home, Signin, Signup, Transactions } from '../pages';
 import ProtectedRoute from './protected-route';
 
@@ -22,6 +22,8 @@ const MainRouter = () => {
         <ProtectedRoute>
           <Transactions />
         </ProtectedRoute>
+        
+        <Redirect from="/" to="/transactions" />
         
       </Switch>
     </BrowserRouter>
