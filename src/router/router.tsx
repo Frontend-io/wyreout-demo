@@ -19,7 +19,7 @@ const MainRouter = () => {
           <Signup />
         </Route>
 
-        <ProtectedRoute>
+        <ProtectedRoute path="/transactions">
           <Transactions />
         </ProtectedRoute>
         
